@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vermelho_actionbar">#DF4A31</color>
+    <color name="texto_actionbar">#FFFFFF</color>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#cccccc"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/personId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerName"
+        android:layout_marginRight="60dp"
+        android:layout_toLeftOf="@+id/check"
+        android:paddingLeft="5dp"
+        android:text="1"
+        android:textColor="#333333" />
+
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personId"
+        android:layout_marginLeft="23dp"
+        android:layout_toLeftOf="@+id/check"
+        android:layout_toRightOf="@+id/avatar"
+        android:paddingLeft="5dp"
+        android:text="Giorgio"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/personName" />
+
+</RelativeLayout>
