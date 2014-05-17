@@ -1,9 +1,6 @@
 package com.fglp.futeba;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import adapter.PersonAdapter;
+import adapter.GroupMemberAdapter;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
@@ -30,7 +27,7 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.People.LoadPeopleResult;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
-import com.google.android.gms.plus.model.people.PersonBuffer;
+import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener,
 ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult> {
@@ -56,14 +53,11 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 	private ConnectionResult mConnectionResult;
 
 	private SignInButton btnSignIn;
-	private ListView listPeople;
-	
-	private PersonAdapter pAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        
+		
 		setContentView(R.layout.activity_main);
 		android.app.ActionBar ab = getActionBar();
 		ab.hide();
@@ -178,29 +172,26 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 		Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
 
 		// Get user's information
-		//getProfileInformation();
+		getProfileInformation();
 
 		// Update the UI after signin
 		updateUI(true);
 		
 		//RETIRAR
-		Plus.PeopleApi.loadVisible(mGoogleApiClient, null).setResultCallback(this);
+		//Plus.PeopleApi.loadVisible(mGoogleApiClient, null).setResultCallback(this);
 
 	}
 	
 	@Override
 	public void onResult(LoadPeopleResult people) {
-		List<Person> personList = new ArrayList<Person>();
-		PersonBuffer personBuffer = people.getPersonBuffer();
-		for (int i = 0, tam = personBuffer.getCount(); i < tam; i++) {
-//			if (i>4)
-//				break;
-			
-			Log.d("Nome: ", personBuffer.get(i).getDisplayName());
-			personList.add(personBuffer.get(i));
-		}
-		pAdapter = new PersonAdapter(this, personList);
-		listPeople.setAdapter(pAdapter);
+//		List<Person> personList = new ArrayList<Person>();
+//		PersonBuffer personBuffer = people.getPersonBuffer();
+//		for (int i = 0, tam = personBuffer.getCount(); i < tam; i++) {
+//			Log.d("Nome: ", personBuffer.get(i).getDisplayName());
+//			personList.add(personBuffer.get(i));
+//		}
+//		pAdapter = new GroupMemberAdapter(this, personList);
+//		listPeople.setAdapter(pAdapter);
 	}
 	
 	/**
@@ -209,6 +200,8 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 	private void updateUI(boolean isSignedIn) {
 		if (isSignedIn) {
 			//CARREGA PROXIMA ACTIVITY
+//			startActivity(new Intent(MainActivity.this, GroupsActivity.class));
+			btnSignIn.setVisibility(View.INVISIBLE);
 		}
 	}
 
