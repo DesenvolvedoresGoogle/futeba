@@ -1,0 +1,423 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"0NZZm4UuLZgEQBhMTwnFS1XIMrM/GJWT8joSdw6yr13ZeyeqE1995iQ\"",
+ "discoveryVersion": "v1",
+ "id": "api:v1",
+ "name": "api",
+ "version": "v1",
+ "description": "This is an API",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://patota-hackathon.appspot.com/_ah/api/api/v1/",
+ "basePath": "/_ah/api/api/v1/",
+ "rootUrl": "https://patota-hackathon.appspot.com/_ah/api/",
+ "servicePath": "api/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "Challenge": {
+   "id": "Challenge",
+   "type": "object",
+   "properties": {
+    "accepted": {
+     "type": "boolean"
+    },
+    "date": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "expires": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "groupId": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "lat": {
+     "type": "number",
+     "format": "float"
+    },
+    "lng": {
+     "type": "number",
+     "format": "float"
+    },
+    "location": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "opponentGroupId": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "ChallengeBulk": {
+   "id": "ChallengeBulk",
+   "type": "object",
+   "properties": {
+    "challenges": {
+     "type": "array",
+     "items": {
+      "$ref": "Challenge"
+     }
+    }
+   }
+  },
+  "DateBulk": {
+   "id": "DateBulk",
+   "type": "object",
+   "properties": {
+    "date": {
+     "type": "string",
+     "format": "date-time"
+    }
+   }
+  },
+  "Event": {
+   "id": "Event",
+   "type": "object",
+   "properties": {
+    "date": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "groups": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "lat": {
+     "type": "number",
+     "format": "float"
+    },
+    "lng": {
+     "type": "number",
+     "format": "float"
+    },
+    "location": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    }
+   }
+  },
+  "Group": {
+   "id": "Group",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "members": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "name": {
+     "type": "string"
+    },
+    "userEmail": {
+     "type": "string"
+    }
+   }
+  },
+  "GroupBulk": {
+   "id": "GroupBulk",
+   "type": "object",
+   "properties": {
+    "groups": {
+     "type": "array",
+     "items": {
+      "$ref": "Group"
+     }
+    }
+   }
+  },
+  "GroupMember": {
+   "id": "GroupMember",
+   "type": "object",
+   "properties": {
+    "abilityLevel": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "confirmed": {
+     "type": "boolean"
+    },
+    "groups": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "int64"
+     }
+    },
+    "id": {
+     "type": "string"
+    },
+    "keeper": {
+     "type": "boolean"
+    },
+    "name": {
+     "type": "string"
+    }
+   }
+  }
+ },
+ "resources": {
+  "patotaAPI": {
+   "methods": {
+    "acceptChallenge": {
+     "id": "api.patotaAPI.acceptChallenge",
+     "path": "acceptChallenge/{groupId}/{challengeId}",
+     "httpMethod": "POST",
+     "parameters": {
+      "challengeId": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      },
+      "groupId": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "groupId",
+      "challengeId"
+     ],
+     "response": {
+      "$ref": "Challenge"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "addChallenge": {
+     "id": "api.patotaAPI.addChallenge",
+     "path": "addChallenge",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "Challenge",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Challenge"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "addEvent": {
+     "id": "api.patotaAPI.addEvent",
+     "path": "addEvent",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "Event",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Event"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "addMember": {
+     "id": "api.patotaAPI.addMember",
+     "path": "addMember/{groupId}",
+     "httpMethod": "POST",
+     "parameters": {
+      "groupId": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "groupId"
+     ],
+     "request": {
+      "$ref": "GroupMember",
+      "parameterName": "resource"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "allChallenges": {
+     "id": "api.patotaAPI.allChallenges",
+     "path": "allChallenges",
+     "httpMethod": "POST",
+     "response": {
+      "$ref": "ChallengeBulk"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "allGroups": {
+     "id": "api.patotaAPI.allGroups",
+     "path": "allGroups",
+     "httpMethod": "POST",
+     "response": {
+      "$ref": "GroupBulk"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "getGroup": {
+     "id": "api.patotaAPI.getGroup",
+     "path": "group/{groupId}",
+     "httpMethod": "GET",
+     "parameters": {
+      "groupId": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "groupId"
+     ],
+     "response": {
+      "$ref": "Group"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insertGroup": {
+     "id": "api.patotaAPI.insertGroup",
+     "path": "group/{groupName}",
+     "httpMethod": "POST",
+     "parameters": {
+      "groupName": {
+       "type": "string",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "groupName"
+     ],
+     "response": {
+      "$ref": "Group"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "now": {
+     "id": "api.patotaAPI.now",
+     "path": "now",
+     "httpMethod": "POST",
+     "response": {
+      "$ref": "DateBulk"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "removeMember": {
+     "id": "api.patotaAPI.removeMember",
+     "path": "member/{groupId}",
+     "httpMethod": "POST",
+     "parameters": {
+      "groupId": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "groupId"
+     ],
+     "request": {
+      "$ref": "GroupMember",
+      "parameterName": "resource"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  }
+ }
+}

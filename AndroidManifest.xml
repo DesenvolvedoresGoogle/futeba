@@ -8,6 +8,8 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
@@ -29,6 +31,12 @@
         </activity>
         <activity android:name="com.fglp.futeba.GroupsActivity"
 		 	android:label="Grupos">
+		</activity>
+		<activity android:name="com.fglp.futeba.AddGroupActivity"
+		 	android:label="Add Grupo">
+		</activity>
+		<activity android:name="com.fglp.futeba.FindChallengeActivity"
+		 	android:label="Challenge">
 		</activity>
     </application>
 

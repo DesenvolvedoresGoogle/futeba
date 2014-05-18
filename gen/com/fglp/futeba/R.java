@@ -1271,35 +1271,38 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020078;
         public static final int common_signin_btn_text_pressed_dark=0x7f020079;
         public static final int common_signin_btn_text_pressed_light=0x7f02007a;
-        public static final int ic_futeba=0x7f02007b;
-        public static final int ic_launcher=0x7f02007c;
-        public static final int ic_plusone_medium_off_client=0x7f02007d;
-        public static final int ic_plusone_small_off_client=0x7f02007e;
-        public static final int ic_plusone_standard_off_client=0x7f02007f;
-        public static final int ic_plusone_tall_off_client=0x7f020080;
-        public static final int list_focused_futeba=0x7f020081;
-        public static final int list_pressed_futeba=0x7f020082;
-        public static final int menu_dropdown_panel_futeba=0x7f020083;
-        public static final int progress_bg_futeba=0x7f020084;
-        public static final int progress_horizontal_futeba=0x7f020085;
-        public static final int progress_primary_futeba=0x7f020086;
-        public static final int progress_secondary_futeba=0x7f020087;
-        public static final int selectable_background_futeba=0x7f020088;
-        public static final int signin=0x7f020089;
-        public static final int signin2=0x7f02008a;
-        public static final int spinner_ab_default_futeba=0x7f02008b;
-        public static final int spinner_ab_disabled_futeba=0x7f02008c;
-        public static final int spinner_ab_focused_futeba=0x7f02008d;
-        public static final int spinner_ab_pressed_futeba=0x7f02008e;
-        public static final int spinner_background_ab_futeba=0x7f02008f;
-        public static final int splash=0x7f020090;
-        public static final int tab_indicator_ab_futeba=0x7f020091;
-        public static final int tab_selected_focused_futeba=0x7f020092;
-        public static final int tab_selected_futeba=0x7f020093;
-        public static final int tab_selected_pressed_futeba=0x7f020094;
-        public static final int tab_unselected_focused_futeba=0x7f020095;
-        public static final int tab_unselected_futeba=0x7f020096;
-        public static final int tab_unselected_pressed_futeba=0x7f020097;
+        public static final int ic_action_addgroup=0x7f02007b;
+        public static final int ic_action_cancel=0x7f02007c;
+        public static final int ic_action_ok=0x7f02007d;
+        public static final int ic_futeba=0x7f02007e;
+        public static final int ic_launcher=0x7f02007f;
+        public static final int ic_plusone_medium_off_client=0x7f020080;
+        public static final int ic_plusone_small_off_client=0x7f020081;
+        public static final int ic_plusone_standard_off_client=0x7f020082;
+        public static final int ic_plusone_tall_off_client=0x7f020083;
+        public static final int list_focused_futeba=0x7f020084;
+        public static final int list_pressed_futeba=0x7f020085;
+        public static final int menu_dropdown_panel_futeba=0x7f020086;
+        public static final int progress_bg_futeba=0x7f020087;
+        public static final int progress_horizontal_futeba=0x7f020088;
+        public static final int progress_primary_futeba=0x7f020089;
+        public static final int progress_secondary_futeba=0x7f02008a;
+        public static final int selectable_background_futeba=0x7f02008b;
+        public static final int signin=0x7f02008c;
+        public static final int signin2=0x7f02008d;
+        public static final int spinner_ab_default_futeba=0x7f02008e;
+        public static final int spinner_ab_disabled_futeba=0x7f02008f;
+        public static final int spinner_ab_focused_futeba=0x7f020090;
+        public static final int spinner_ab_pressed_futeba=0x7f020091;
+        public static final int spinner_background_ab_futeba=0x7f020092;
+        public static final int splash=0x7f020093;
+        public static final int tab_indicator_ab_futeba=0x7f020094;
+        public static final int tab_selected_focused_futeba=0x7f020095;
+        public static final int tab_selected_futeba=0x7f020096;
+        public static final int tab_selected_pressed_futeba=0x7f020097;
+        public static final int tab_unselected_focused_futeba=0x7f020098;
+        public static final int tab_unselected_futeba=0x7f020099;
+        public static final int tab_unselected_pressed_futeba=0x7f02009a;
     }
     public static final class id {
         public static final int action_bar=0x7f06001f;
@@ -1313,16 +1316,17 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060019;
         public static final int action_menu_presenter=0x7f06001a;
         public static final int action_mode_close_button=0x7f060027;
-        public static final int action_settings=0x7f060048;
+        public static final int action_settings=0x7f060056;
         public static final int activity_chooser_view_content=0x7f060028;
         public static final int always=0x7f06000f;
-        public static final int avatar=0x7f060045;
+        public static final int avatar=0x7f060051;
         public static final int beginning=0x7f060014;
-        public static final int btn_sign_in=0x7f060041;
-        public static final int check=0x7f060044;
+        public static final int btn_sign_in=0x7f060045;
+        public static final int challenge=0x7f06004e;
+        public static final int check=0x7f06004b;
         public static final int checkbox=0x7f060030;
         public static final int collapseActionView=0x7f060011;
-        public static final int container=0x7f06003f;
+        public static final int container=0x7f060042;
         public static final int default_activity_button=0x7f06002b;
         public static final int dialog=0x7f060012;
         public static final int disableHome=0x7f06000c;
@@ -1331,23 +1335,33 @@ containing a value of this type.
         public static final int end=0x7f060016;
         public static final int expand_activities_button=0x7f060029;
         public static final int expanded_menu=0x7f06002f;
+        public static final int groupAvatar=0x7f06004c;
+        public static final int groupId=0x7f06004a;
+        public static final int groupName=0x7f060040;
         public static final int home=0x7f060017;
         public static final int homeAsUp=0x7f060009;
         public static final int hybrid=0x7f060004;
         public static final int icon=0x7f06002d;
         public static final int ifRoom=0x7f06000e;
         public static final int image=0x7f06002a;
-        public static final int imageView1=0x7f060040;
-        public static final int linearLayout1=0x7f060046;
+        public static final int imageButton1=0x7f060049;
+        public static final int imageView1=0x7f060044;
+        public static final int linearLayout1=0x7f06004d;
+        public static final int listGroup=0x7f060043;
         public static final int listMode=0x7f060005;
+        public static final int listView1=0x7f060046;
         public static final int list_item=0x7f06002c;
+        public static final int menu_addgroup=0x7f060055;
+        public static final int menu_cancel=0x7f060054;
+        public static final int menu_ok=0x7f060053;
         public static final int middle=0x7f060015;
         public static final int never=0x7f06000d;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int personId=0x7f060042;
-        public static final int personName=0x7f060047;
-        public static final int playerName=0x7f060043;
+        public static final int peopleList=0x7f060041;
+        public static final int personId=0x7f06004f;
+        public static final int personName=0x7f060052;
+        public static final int playerName=0x7f060050;
         public static final int progress_circular=0x7f06001b;
         public static final int progress_horizontal=0x7f06001c;
         public static final int radio=0x7f060032;
@@ -1362,6 +1376,7 @@ containing a value of this type.
         public static final int search_plate=0x7f060039;
         public static final int search_src_text=0x7f06003a;
         public static final int search_voice_btn=0x7f06003e;
+        public static final int seekBar1=0x7f060047;
         public static final int shortcut=0x7f060031;
         public static final int showCustom=0x7f06000b;
         public static final int showHome=0x7f060008;
@@ -1370,6 +1385,8 @@ containing a value of this type.
         public static final int submit_area=0x7f06003c;
         public static final int tabMode=0x7f060006;
         public static final int terrain=0x7f060003;
+        public static final int textView1=0x7f06003f;
+        public static final int textView2=0x7f060048;
         public static final int title=0x7f06002e;
         public static final int top_action_bar=0x7f060023;
         public static final int up=0x7f060024;
@@ -1427,14 +1444,19 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_groups=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int listview_groups=0x7f03001a;
-        public static final int listview_people=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_addgroup=0x7f030018;
+        public static final int activity_groups=0x7f030019;
+        public static final int activity_main=0x7f03001a;
+        public static final int find_challenge=0x7f03001b;
+        public static final int groupchallenge_listview=0x7f03001c;
+        public static final int listview_groups=0x7f03001d;
+        public static final int listview_people=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int activity_addgroup=0x7f0c0000;
+        public static final int activity_groups=0x7f0c0001;
+        public static final int main=0x7f0c0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1477,7 +1499,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f070026;
-        public static final int action_settings=0x7f07002a;
+        public static final int action_settings=0x7f07002d;
         public static final int app_name=0x7f070028;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -1577,6 +1599,9 @@ containing a value of this type.
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f07001a;
+        public static final int menu_addgroup=0x7f07002a;
+        public static final int menu_cancel=0x7f07002c;
+        public static final int menu_ok=0x7f07002b;
     }
     public static final class style {
         public static final int ActionBar_Solid_Futeba=0x7f0b008c;

@@ -7,10 +7,10 @@
     android:padding="5dp" >
 
     <TextView
-        android:id="@+id/personId"
+        android:id="@+id/groupId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/playerName"
+        android:layout_below="@+id/groupName"
         android:layout_marginRight="60dp"
         android:layout_toLeftOf="@+id/check"
         android:paddingLeft="5dp"
@@ -19,30 +19,30 @@
 
 
     <ImageView
-        android:id="@+id/avatar"
+        android:id="@+id/groupAvatar"
         android:layout_alignLeft="@+id/linearLayout1"
         android:layout_alignTop="@+id/linearLayout1"
         android:layout_width="72dp"
         android:layout_height="72dp"/>
 
     <TextView
-        android:id="@+id/personName"
+        android:id="@+id/groupName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/personId"
+        android:layout_below="@+id/groupId"
         android:layout_marginLeft="23dp"
         android:layout_toLeftOf="@+id/check"
-        android:layout_toRightOf="@+id/avatar"
+        android:layout_toRightOf="@+id/groupAvatar"
         android:paddingLeft="5dp"
         android:text="Giorgio"
         android:textColor="#333333"
         android:textSize="20sp" />
 
-    <CheckBox
-        android:id="@+id/check"
+    <Button
+        android:id="@+id/challenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/personName" />
+        android:layout_alignTop="@+id/groupName" />
 
 </RelativeLayout>

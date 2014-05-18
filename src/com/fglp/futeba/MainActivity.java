@@ -58,6 +58,7 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		
 		setContentView(R.layout.activity_main);
 		android.app.ActionBar ab = getActionBar();
 		ab.hide();
@@ -172,7 +173,7 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 		Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
 
 		// Get user's information
-		getProfileInformation();
+		//getProfileInformation();
 
 		// Update the UI after signin
 		updateUI(true);
@@ -200,8 +201,7 @@ ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<LoadPeopleResult
 	private void updateUI(boolean isSignedIn) {
 		if (isSignedIn) {
 			//CARREGA PROXIMA ACTIVITY
-//			startActivity(new Intent(MainActivity.this, GroupsActivity.class));
-			btnSignIn.setVisibility(View.INVISIBLE);
+			startActivity(new Intent(MainActivity.this, GroupsActivity.class));
 		}
 	}
 

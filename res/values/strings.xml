@@ -3,6 +3,9 @@
 
     <string name="app_name">Futeba</string>
     <string name="hello_world">Hello world!</string>
+    <string name="menu_addgroup">Add Grupo</string>
+    <string name="menu_ok">Salvar</string>
+    <string name="menu_cancel">Cancelar</string>
     <string name="action_settings">Settings</string>
 
 </resources>
