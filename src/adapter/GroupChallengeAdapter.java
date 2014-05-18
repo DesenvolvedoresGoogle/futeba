@@ -73,6 +73,7 @@ public class GroupChallengeAdapter extends ArrayAdapter<ChallengeGroup> {
 						try {
 							PatotaAPIFactory.getService().acceptChallenge(
 									group.groupId, group.challengeId);
+							ccList.remove(group);
 						} catch (IOException e) {
 							throw new IllegalStateException(
 									"Erro aceitando challenge");

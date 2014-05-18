@@ -29,7 +29,7 @@
         android:layout_alignTop="@+id/textView1"
         android:layout_marginLeft="26dp"
         android:layout_toRightOf="@+id/textView1"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_action_ok" />
 
     <ImageView
         android:id="@+id/imageView1"

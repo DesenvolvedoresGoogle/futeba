@@ -8,10 +8,14 @@ import java.util.LinkedList;
 import adapter.GroupChallengeAdapter;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
@@ -84,7 +88,27 @@ public class FindChallengeActivity extends Activity implements OnClickListener,
 		listGroup = (ListView) findViewById(R.id.listView1);
 		listGroup.setAdapter(gAdapter);
 	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    // Inflate the menu items for use in the action bar
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.activity_groups, menu);
+	    return super.onCreateOptionsMenu(menu);
+	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.menu_addgroup:
+	        	createChallenge();
+	        	return true;    
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+	
 	public void createChallenge() {
 		new Thread(new Runnable() {
 
